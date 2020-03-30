@@ -1,0 +1,76 @@
+<header>
+    <div class="profile-page sidebar-collapse">
+      <nav class="navbar navbar-expand-lg fixed-top navbar-transparent bg-primary" color-on-scroll="400">
+        <div class="container">
+          <div class="navbar-translate">
+            <!-- <a class="navbar-brand" href="#" rel="tooltip">David CV</a> -->
+            <button id="burgerButton" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+              aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-bar bar1"></span>
+              <span class="navbar-toggler-bar bar2"></span>
+              <span class="navbar-toggler-bar bar3"></span>
+            </button>
+          </div>
+          <div class="collapse navbar-collapse justify-content-center" id="navigation">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link smooth-scroll" (click)="collapseMenu()" href="#intro">{{ 'Intro' | translate }}</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link smooth-scroll" (click)="collapseMenu()" href="#about">{{ 'About me' | translate }}</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link smooth-scroll" (click)="collapseMenu()" href="#experience">{{ 'Experience' | translate }}</a>
+                </li>
+
+                <li class="nav-item">
+                    <!-- <a class="nav-link smooth-scroll" (click)="collapseMenu()" href="#projects">Proyectos</a> -->
+                  </li>
+              <li class="nav-item">
+                <a class="nav-link smooth-scroll" (click)="collapseMenu()" href="#skill">{{ 'Languages' | translate }}</a>
+              </li>
+             
+              <li class="nav-item">
+                <a class="nav-link smooth-scroll" (click)="collapseMenu()" href="#education">{{ 'Education' | translate }}</a>
+              </li>
+
+              <li class="nav-item">
+                  <a class="nav-link smooth-scroll" (click)="collapseMenu()" href="#reference">{{ 'References' | translate }}</a>
+              </li>
+            </ul>
+            
+            <li class="ml-3 dot-none dropdown language-selector">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-close-others="true">
+                <img id="mainImg" src="assets/images/spain.png" />
+              </a>
+              <ul id="desplegable" class="h-200x min-w-3r dropdown-menu pull-right">
+                <li>
+                  <a href="#">
+                    <img (click)="changeMainImg('es')" src="assets/images/spain.png" />
+                  </a>
+                </li>
+                <li class="active">
+                  <a href="#">
+                    <img (click)="changeMainImg('en')" src="assets/images/britain.png" />
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img (click)="changeMainImg('fr')" src="assets/images/france.png" />
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img (click)="changeMainImg('it')" src="assets/images/italy.png" />
+                  </a>
+                </li>
+              </ul>
+            </li>
+            
+          </div>
+
+        </div>
+      </nav>
+
+    </div>
+  </header>

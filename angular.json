@@ -1,9 +1,9 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "teacher-web": {
+    "personal-portfoli-angular": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,12 +17,12 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/teacher-web",
+            "outputPath": "dist/personal-portfoli-angular",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "aot": true,
+            "aot": false,
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -45,6 +45,7 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
+              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -66,18 +67,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "teacher-web:build"
+            "browserTarget": "personal-portfoli-angular:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "teacher-web:build:production"
+              "browserTarget": "personal-portfoli-angular:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "teacher-web:build"
+            "browserTarget": "personal-portfoli-angular:build"
           }
         },
         "test": {
@@ -114,15 +115,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "teacher-web:serve"
+            "devServerTarget": "personal-portfoli-angular:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "teacher-web:serve:production"
+              "devServerTarget": "personal-portfoli-angular:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "teacher-web"
+  "defaultProject": "personal-portfoli-angular"
 }
